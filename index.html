@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stephany Flores - Business Development Representative especializada en ventas B2B SaaS. Prospección, generación de oportunidades y cierre de negocios tecnológicos.">
+    <title>Stephany Flores | BDR - Ventas Tech & SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0F172A',
+                            800: '#1E293B',
+                            700: '#334155',
+                        },
+                        rose: {
+                            500: '#D67B8A',
+                            600: '#C56A79',
+                            400: '#E89AA6',
+                        },
+                        cream: '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base styles */
+        body { 
+            font-family: 'Open Sans', sans-serif; 
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; }
+        
+        /* Typography */
+        .tight-kern { letter-spacing: -0.04em; }
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 0.95;
+        }
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+        }
+        
+        /* Color System */
+        .text-cobalt { color: #D67B8A; }
+        .bg-cobalt { background-color: #D67B8A; }
+        .bg-navy { background-color: #0F172A; }
+        .text-navy { color: #0F172A; }
+        .border-cobalt { border-color: #D67B8A; }
+        
+        /* Premium Gradient Backgrounds */
+        .gradient-hero { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%); 
+        }
+        .gradient-mesh {
+            background: 
+                radial-gradient(at 40% 20%, rgba(214, 123, 138, 0.12) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(197, 106, 121, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, rgba(214, 123, 138, 0.06) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, rgba(232, 154, 166, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(197, 106, 121, 0.08) 0px, transparent 50%);
+        }
+        
+        /* Glassmorphism Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.02),
+                0 2px 4px -1px rgba(0, 0, 0, 0.02),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Premium Hover Effects */
+        .hover-lift { 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .hover-lift:hover { 
+            transform: translateY(-12px) scale(1.02); 
+            box-shadow: 
+                0 25px 50px -12px rgba(15, 23, 42, 0.25),
+                0 0 0 1px rgba(37, 99, 235, 0.1);
+        }
+        
+        /* Premium Button Styles */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+        .btn-glow:hover {
+            box-shadow: 
+                0 0 20px rgba(214, 123, 138, 0.4),
+                0 0 40px rgba(214, 123, 138, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Accent Underline with animation */
+        .accent-underline { 
+            position: relative; 
+            display: inline-block; 
+        }
+        .accent-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #D67B8A, #E89AA6);
+            border-radius: 2px;
+        }
+        .accent-underline:hover::after {
+            width: 100%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Decorative Elements */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            animation: float 20s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        
+        /* Grid Pattern Background */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(214, 123, 138, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(214, 123, 138, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        
+        /* Animated Border */
+        .animated-border {
+            position: relative;
+            background: white;
+        }
+        .animated-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #D67B8A, #E89AA6, #D67B8A);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .animated-border:hover::before {
+            opacity: 1;
+        }
+        
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #D67B8A 0%, #E89AA6 50%, #D67B8A 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient-shift 5s ease infinite;
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Hero Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            min-height: 100vh;
+            position: relative;
+        }
+        @media (max-width: 1024px) {
+            .hero-grid { 
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+        }
+        
+        /* Animations */
+        .animate-fade-in { 
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp { 
+            from { opacity: 0; transform: translateY(30px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        
+        .animate-fade-in-delay-1 { animation-delay: 0.1s; }
+        .animate-fade-in-delay-2 { animation-delay: 0.2s; }
+        .animate-fade-in-delay-3 { animation-delay: 0.3s; }
+        .animate-fade-in-delay-4 { animation-delay: 0.4s; }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        @media (max-width: 640px) {
+            .stats-grid {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .stats-grid > div {
+                width: 100%;
+            }
+            .stats-grid .divider {
+                display: none;
+            }
+        }
+        
+        /* Card Shimmer Effect */
+        .card-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .card-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 100%
+            );
+            transform: rotate(30deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+        .card-shimmer:hover::after {
+            opacity: 1;
+            left: 100%;
+        }
+        
+        /* Mobile Improvements */
+        @media (max-width: 768px) {
+            .mobile-full { width: 100%; }
+            .hover-lift:hover { transform: translateY(-6px) scale(1.01); }
+        }
+    </style>
+</head>
+<body class="bg-white text-navy antialiased">
+
+    <!-- Decorative Orbs -->
+    <div class="orb w-96 h-96 bg-rose-500/15 top-20 -left-48 z-0 pointer-events-none"></div>
+    <div class="orb w-64 h-64 bg-rose-300/10 top-60 right-20 z-0 pointer-events-none" style="animation-delay: -5s;"></div>
+    
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex justify-between h-20 items-center">
+                <span class="text-xl font-bold tracking-tight text-navy font-['Inter']">Nicole Flores<span class="text-cobalt">.</span></span>
+                <div class="hidden md:flex space-x-10 text-sm font-semibold font-['Inter']">
+                    <a href="#about" class="text-navy-700 hover:text-cobalt transition-colors">Sobre Mí</a>
+                    <a href="#results" class="text-navy-700 hover:text-cobalt transition-colors">Resultados</a>
+                    <a href="#experience" class="text-navy-700 hover:text-cobalt transition-colors">Experiencia</a>
+                    <a href="#skills" class="text-navy-700 hover:text-cobalt transition-colors">Stack</a>
+                </div>
+                <a href="#contact" class="hidden md:inline-flex px-8 py-3 bg-cobalt text-white font-semibold font-['Inter'] text-sm btn-glow rounded-lg">CONTACT</a>
+                <button class="md:hidden p-2 text-navy" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-8 py-6 space-y-4">
+                <a href="#about" class="block text-navy-700 font-medium">Sobre Mí</a>
+                <a href="#results" class="block text-navy-700 font-medium">Resultados</a>
+                <a href="#experience" class="block text-navy-700 font-medium">Experiencia</a>
+                <a href="#skills" class="block text-navy-700 font-medium">Stack</a>
+                <a href="#contact" class="block text-cobalt font-bold">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-grid pt-20 gradient-mesh relative overflow-hidden">
+        <!-- Cherry Blossom Branch (BACK - behind content) -->
+        <svg class="absolute right-0 top-0 w-40 lg:w-56 h-full opacity-50 pointer-events-none z-0" viewBox="0 0 200 600" fill="none" preserveAspectRatio="xMidYMin slice">
+            <!-- Main branch -->
+            <path d="M160 0C150 50 140 100 145 150C150 200 170 250 160 300C150 350 120 400 130 450C140 500 160 550 150 600" 
+                  stroke="#8B7355" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <!-- Secondary branches -->
+            <path d="M145 100C145 100 110 90 80 110" stroke="#8B7355" stroke-width="2" stroke-linecap="round"/>
+            <path d="M160 250C160 250 120 240 85 260" stroke="#8B7355" stroke-width="2" stroke-linecap="round"/>
+            <path d="M130 400C130 400 95 390 65 410" stroke="#8B7355" stroke-width="2" stroke-linecap="round"/>
+            
+            <!-- Cherry Blossoms (Sakura flowers) - 5 petals each -->
+            <g opacity="0.7">
+                <!-- Flower 1 -->
+                <g transform="translate(80, 110) scale(0.8)">
+                    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="#FFB7C5" transform="rotate(0)"/>
+                    <ellipse cx="7" cy="-3" rx="5" ry="8" fill="#FFC4D0" transform="rotate(72)"/>
+                    <ellipse cx="5" cy="6" rx="5" ry="8" fill="#FFB7C5" transform="rotate(144)"/>
+                    <ellipse cx="-5" cy="6" rx="5" ry="8" fill="#FFC4D0" transform="rotate(216)"/>
+                    <ellipse cx="-7" cy="-3" rx="5" ry="8" fill="#FFB7C5" transform="rotate(288)"/>
+                    <circle cx="0" cy="0" r="3" fill="#FFE4E9"/>
+                </g>
+                <!-- Flower 2 -->
+                <g transform="translate(85, 260) scale(0.9)">
+                    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="#FFB7C5" transform="rotate(15)"/>
+                    <ellipse cx="7" cy="-3" rx="5" ry="8" fill="#FFC4D0" transform="rotate(87)"/>
+                    <ellipse cx="5" cy="6" rx="5" ry="8" fill="#FFB7C5" transform="rotate(159)"/>
+                    <ellipse cx="-5" cy="6" rx="5" ry="8" fill="#FFC4D0" transform="rotate(231)"/>
+                    <ellipse cx="-7" cy="-3" rx="5" ry="8" fill="#FFB7C5" transform="rotate(303)"/>
+                    <circle cx="0" cy="0" r="3" fill="#FFE4E9"/>
+                </g>
+                <!-- Flower 3 -->
+                <g transform="translate(65, 410) scale(0.7)">
+                    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="#FFB7C5" transform="rotate(30)"/>
+                    <ellipse cx="7" cy="-3" rx="5" ry="8" fill="#FFC4D0" transform="rotate(102)"/>
+                    <ellipse cx="5" cy="6" rx="5" ry="8" fill="#FFB7C5" transform="rotate(174)"/>
+                    <ellipse cx="-5" cy="6" rx="5" ry="8" fill="#FFC4D0" transform="rotate(246)"/>
+                    <ellipse cx="-7" cy="-3" rx="5" ry="8" fill="#FFB7C5" transform="rotate(318)"/>
+                    <circle cx="0" cy="0" r="3" fill="#FFE4E9"/>
+                </g>
+                <!-- Small flowers -->
+                <g transform="translate(120, 180) scale(0.5)">
+                    <circle r="8" fill="#FFC4D0" opacity="0.8"/>
+                </g>
+                <g transform="translate(140, 320) scale(0.4)">
+                    <circle r="8" fill="#FFB7C5" opacity="0.8"/>
+                </g>
+                <g transform="translate(110, 480) scale(0.5)">
+                    <circle r="8" fill="#FFC4D0" opacity="0.8"/>
+                </g>
+            </g>
+        </svg>
+        
+        <div class="relative h-[40vh] lg:h-auto lg:max-h-[85vh] min-h-[300px] max-h-[600px] order-2 lg:order-1 flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+            <img 
+                src="img/principalderech.png" 
+                alt="Stephany Flores - Business Development Representative"
+                class="h-full w-full lg:w-auto lg:max-w-full object-contain object-center"
+            />
+            <div class="absolute bottom-4 left-4 lg:bottom-6 lg:left-6">
+                <div class="w-3 h-3 bg-cobalt rounded-full animate-pulse shadow-lg shadow-cobalt/50"></div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-12 bg-white order-1 lg:order-2">
+            <div class="max-w-2xl animate-fade-in">
+                <p class="text-cobalt font-semibold tracking-widest text-xs sm:text-sm mb-4 sm:mb-6 font-['Inter'] uppercase">Business Development Representative</p>
+                
+                <h1 class="hero-title font-black text-navy tight-kern mb-6 sm:mb-8 font-['Inter'] accent-underline">
+                    Stephany Nicole<br/>Flores Perez
+                </h1>
+                
+                <h2 class="text-lg sm:text-xl lg:text-2xl text-cobalt font-semibold mb-4 sm:mb-6 font-['Inter']">
+                    Prospecting Strategy. SaaS Growth. Remote Operations.
+                </h2>
+                
+                <p class="text-sm sm:text-base text-navy-700 leading-relaxed mb-6 sm:mb-10 max-w-lg font-['Open_Sans']">
+                    Especialista en prospección B2B y ventas consultivas para empresas tecnológicas. Transformo leads cualificados en oportunidades de negocio mediante estrategias data-driven y relaciones auténticas.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 bg-cobalt text-white font-bold font-['Inter'] text-sm tracking-wide btn-glow rounded-lg shadow-lg shadow-blue-500/25 mobile-full">
+                        CONTACT
+                    </a>
+                    <a href="mailto:stepahy31@gmail.com" class="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 border-2 border-navy text-navy font-bold font-['Inter'] text-sm tracking-wide hover:bg-navy hover:text-white transition-all rounded-lg mobile-full hover:shadow-xl">
+                        EMAIL
+                    </a>
+                </div>
+                
+                <div class="stats-grid mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200/50">
+                    <div class="flex-1 min-w-[100px]">
+                        <p class="text-2xl sm:text-3xl font-black text-navy font-['Inter']">+85%</p>
+                        <p class="text-xs text-navy-700 uppercase tracking-wide mt-1">Oportunidades Generadas</p>
+                    </div>
+                    <div class="divider w-px h-12 bg-slate-200 hidden sm:block"></div>
+                    <div class="flex-1 min-w-[100px]">
+                        <p class="text-2xl sm:text-3xl font-black text-navy font-['Inter']">28%</p>
+                        <p class="text-xs text-navy-700 uppercase tracking-wide mt-1">Reply Rate</p>
+                    </div>
+                    <div class="divider w-px h-12 bg-slate-200 hidden sm:block"></div>
+                    <div class="flex-1 min-w-[100px]">
+                        <p class="text-2xl sm:text-3xl font-black text-navy font-['Inter']">150+</p>
+                        <p class="text-xs text-navy-700 uppercase tracking-wide mt-1">Meetings Booked</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 overflow-hidden">
+        
+        <section id="about" class="mb-16 sm:mb-24 lg:mb-32">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                <div>
+                    <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase accent-underline">Sobre Mí</p>
+                    <h2 class="text-4xl lg:text-5xl font-black text-navy tight-kern leading-tight mb-8 font-['Inter']">
+                        Transformando<br/>conexiones en<br/><span class="text-cobalt">oportunidades</span>
+                    </h2>
+                    <p class="text-navy-700 leading-relaxed mb-6 font-['Open_Sans']">
+                        Profesional apasionada por el mundo tech y las ventas consultivas. Combino habilidades analíticas con comunicación empática para entender las necesidades reales de los clientes y ofrecer soluciones que generen valor tangible.
+                    </p>
+                    <p class="text-navy-700 leading-relaxed font-['Open_Sans']">
+                        Mi enfoque está en construir relaciones a largo plazo, no solo cerrar transacciones. Busco aportar a equipos de ventas dinámicos donde la innovación y los resultados sean prioridad.
+                    </p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-4 shadow-inner">
+                            <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-navy mb-2 font-['Inter']">Prospección Estratégica</h4>
+                        <p class="text-sm text-navy-700 font-['Open_Sans']">Identificación de ICPs mediante sales intelligence y análisis de mercado B2B.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-4 shadow-inner">
+                            <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-navy mb-2 font-['Inter']">Venta Consultiva</h4>
+                        <p class="text-sm text-navy-700 font-['Open_Sans']">Descubrimiento de pain points y presentación de soluciones técnicas adaptadas.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-4 shadow-inner">
+                            <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-navy mb-2 font-['Inter']">Cierre & Negociación</h4>
+                        <p class="text-sm text-navy-700 font-['Open_Sans']">Manejo de objeciones y técnicas de cierre para maximizar conversión.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <div class="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-4 shadow-inner">
+                            <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-navy mb-2 font-['Inter']">Gestión de Prospectos</h4>
+                        <p class="text-sm text-navy-700 font-['Open_Sans']">Gestión de CRM y seguimiento sistemático del funnel de ventas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="mb-16 sm:mb-24 lg:mb-32 bg-cream grid-pattern -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase accent-underline">Impacto Medible</p>
+                    <h2 class="text-4xl lg:text-5xl font-black text-navy tight-kern font-['Inter']">Resultados que hablan</h2>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl text-center card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <p class="text-5xl font-black text-cobalt mb-2 font-['Inter']">+40%</p>
+                        <p class="text-sm font-bold text-navy font-['Inter']">Incremento en Metas</p>
+                        <p class="text-xs text-navy-700 mt-1 font-['Open_Sans']">Superando objetivos trimestrales</p>
+                    </div>
+                    <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl text-center card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <p class="text-5xl font-black text-cobalt mb-2 font-['Inter']">95%</p>
+                        <p class="text-sm font-bold text-navy font-['Inter']">Satisfacción Cliente</p>
+                        <p class="text-xs text-navy-700 mt-1 font-['Open_Sans']">Basado en feedback directo</p>
+                    </div>
+                    <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl text-center card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <p class="text-5xl font-black text-cobalt mb-2 font-['Inter']">3 días</p>
+                        <p class="text-sm font-bold text-navy font-['Inter']">Tiempo Promedio</p>
+                        <p class="text-xs text-navy-700 mt-1 font-['Open_Sans']">De lead a primera reunión</p>
+                    </div>
+                    <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl text-center card-shimmer hover:border-cobalt transition-all hover-lift">
+                        <p class="text-5xl font-black text-cobalt mb-2 font-['Inter']">200+</p>
+                        <p class="text-sm font-bold text-navy font-['Inter']">Contactos/Mes</p>
+                        <p class="text-xs text-navy-700 mt-1 font-['Open_Sans']">Prospectos activos gestionados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-16 sm:mb-24 lg:mb-32">
+            <div class="mb-8 sm:mb-12 lg:mb-16">
+                <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase accent-underline">Trayectoria</p>
+                <h2 class="text-4xl lg:text-5xl font-black text-navy tight-kern font-['Inter']">Experiencia Profesional</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4 sm:gap-6 lg:gap-8">
+                        <div class="md:w-1/3">
+                            <span class="inline-block px-4 py-1 bg-cobalt/10 text-cobalt text-xs font-bold font-['Inter'] uppercase tracking-wide mb-3">Nov 2025 - Presente</span>
+                            <h4 class="text-xl font-bold text-navy font-['Inter']">Turingtech</h4>
+                            <p class="text-sm text-navy-700 font-['Open_Sans']">B2B Sales - Remoto (Global)</p>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h5 class="font-bold text-navy mb-4 font-['Inter'] text-lg">Business Development Representative - Proyecto</h5>
+                            <ul class="space-y-3 text-sm text-navy-700 font-['Open_Sans']">
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Prospección B2B y generación de leads cualificados para clientes tecnológicos internacionales.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Gestión de prospectos y outreach multicanal (email, LinkedIn, calling) en entorno 100% virtual.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Trabajo por proyecto con horario flexible, adaptando estrategias según mercado objetivo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4 sm:gap-6 lg:gap-8">
+                        <div class="md:w-1/3">
+                            <span class="inline-block px-4 py-1 bg-cobalt/10 text-cobalt text-xs font-bold font-['Inter'] uppercase tracking-wide mb-3">Dic 2023 – Actualidad</span>
+                            <h4 class="text-xl font-bold text-navy font-['Inter']">R/B, MANGO</h4>
+                            <p class="text-sm text-navy-700 font-['Open_Sans']">Retail Fashion - LC Waikiki</p>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h5 class="font-bold text-navy mb-4 font-['Inter'] text-lg">Sales Specialist & Customer Experience</h5>
+                            <ul class="space-y-3 text-sm text-navy-700 font-['Open_Sans']">
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Liderazgo en ventas consultivas con foco en upselling y cross-selling, superando metas mensuales en un 40%.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Desarrollo de relaciones de largo plazo con clientes de alto valor, logrando tasa de retención del 65%.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Capacitación de nuevos talentos en técnicas de venta y atención al cliente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4 sm:gap-6 lg:gap-8">
+                        <div class="md:w-1/3">
+                            <span class="inline-block px-4 py-1 bg-cobalt/10 text-cobalt text-xs font-bold font-['Inter'] uppercase tracking-wide mb-3">Enero 2023 - Dic 2023</span>
+                            <h4 class="text-xl font-bold text-navy font-['Inter']">CITIMED</h4>
+                            <p class="text-sm text-navy-700 font-['Open_Sans']">Salud & Tecnología - Vanessa Barragán</p>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h5 class="font-bold text-navy mb-4 font-['Inter'] text-lg">Operations & Data Analyst</h5>
+                            <ul class="space-y-3 text-sm text-navy-700 font-['Open_Sans']">
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Administración de CRM y bases de datos de pacientes, asegurando 99% de precisión en registros.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Optimización de procesos operativos que redujeron tiempos de atención en un 25%.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Coordinación entre equipos médicos y administrativos en entornos de alta presión.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 sm:p-6 lg:p-8 rounded-xl card-shimmer hover:border-cobalt transition-all hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4 sm:gap-6 lg:gap-8">
+                        <div class="md:w-1/3">
+                            <span class="inline-block px-4 py-1 bg-cobalt/10 text-cobalt text-xs font-bold font-['Inter'] uppercase tracking-wide mb-3">Mar 2021 - Dic 2022</span>
+                            <h4 class="text-xl font-bold text-navy font-['Inter']">Las Delicias de la Guaragua</h4>
+                            <p class="text-sm text-navy-700 font-['Open_Sans']">Operaciones Logísticas - Ecuador</p>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h5 class="font-bold text-navy mb-4 font-['Inter'] text-lg">Process Optimization Specialist</h5>
+                            <ul class="space-y-3 text-sm text-navy-700 font-['Open_Sans']">
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Diseño de mejoras en control de inventarios y gestión financiera operativa.</li>
+                                <li class="flex items-start gap-3"><span class="text-cobalt font-bold mt-0.5">→</span> Implementación de sistemas de tracking que mejoraron visibilidad del negocio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16 sm:mb-24 lg:mb-32">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16">
+                <div>
+                    <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase accent-underline">Tech Stack</p>
+                    <h2 class="text-4xl lg:text-5xl font-black text-navy tight-kern mb-10 font-['Inter']">Herramientas &<br/>Tecnologías</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- CRM -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#00A1E0]/10 to-[#FF6B6B]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#00A1E0]/20 group-hover:to-[#FF6B6B]/20 transition-all">
+                                <!-- Salesforce Cloud -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 32" fill="none">
+                                    <path d="M38.4 25.6c2.8 0 5.1-2.3 5.1-5.1s-2.3-5.1-5.1-5.1c-.7 0-1.4.1-2 .4-1.3-3.6-4.8-6.2-8.9-6.2-1.3 0-2.5.3-3.6.7C23.2 5.6 19.1 2.3 14.3 2.3c-5.6 0-10.3 3.8-11.7 9-.1 0-.2 0-.3 0-3.2 0-5.8 2.6-5.8 5.8 0 3.2 2.6 5.8 5.8 5.8h36.1z" fill="#00A1E0"/>
+                                    <circle cx="14" cy="12" r="3" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">CRM Systems</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#00A1E0]/10 text-[#00A1E0] text-xs rounded font-medium">Salesforce</span>
+                                        <span class="px-2 py-0.5 bg-[#FF7A59]/10 text-[#FF7A59] text-xs rounded font-medium">HubSpot</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Gestión de oportunidades, seguimiento de leads & automatización</p>
+                            </div>
+                        </div>
+
+                        <!-- Sales Engagement -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#6366F1]/10 to-[#8B5CF6]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#6366F1]/20 group-hover:to-[#8B5CF6]/20 transition-all">
+                                <!-- LinkedIn + Email -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <rect x="4" y="4" width="18" height="18" rx="2" fill="#0A66C2"/>
+                                    <path d="M8 10h3v8H8V10zm1.5-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM12 14h3v1.5c.5-1 2-1.5 3-1.5 3 0 3.5 2 3.5 4.5V22h-3v-4c0-1-.5-2-1.5-2s-1.5 1-1.5 2v4h-3v-8z" fill="white"/>
+                                    <circle cx="30" cy="24" r="12" fill="#6366F1" opacity="0.2"/>
+                                    <path d="M26 18h8v2h-8v-2zm0 4h8v2h-8v-2zm0 4h5v2h-5v-2z" fill="#6366F1"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Sales Engagement</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#0A66C2]/10 text-[#0A66C2] text-xs rounded font-medium">LinkedIn</span>
+                                        <span class="px-2 py-0.5 bg-[#6366F1]/10 text-[#6366F1] text-xs rounded font-medium">Apollo</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Prospecting, outreach sequences & social selling</p>
+                            </div>
+                        </div>
+
+                        <!-- Data Analytics -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#217346]/10 to-[#F25022]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#217346]/20 group-hover:to-[#F25022]/20 transition-all">
+                                <!-- Excel + Analytics -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <rect x="4" y="8" width="18" height="32" rx="2" fill="#217346"/>
+                                    <path d="M8 14h10v4H8v-4zm0 8h10v4H8v-4zm0 8h6v4H8v-4z" fill="white"/>
+                                    <text x="9" y="28" fill="white" font-size="8" font-weight="bold">X</text>
+                                    <circle cx="34" cy="24" r="10" fill="#F25022" opacity="0.9"/>
+                                    <path d="M30 20l4 8 4-8" stroke="white" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Data & Analytics</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#217346]/10 text-[#217346] text-xs rounded font-medium">Excel</span>
+                                        <span class="px-2 py-0.5 bg-[#F25022]/10 text-[#F25022] text-xs rounded font-medium">Analytics</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Reporting, dashboards & sales metrics</p>
+                            </div>
+                        </div>
+
+                        <!-- Marketing -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#4285F4]/10 to-[#1877F2]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#4285F4]/20 group-hover:to-[#1877F2]/20 transition-all">
+                                <!-- Google + Meta -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <circle cx="12" cy="24" r="10" fill="#4285F4"/>
+                                    <path d="M12 16v16c4 0 8-3.5 8-8s-4-8-8-8z" fill="white" opacity="0.3"/>
+                                    <rect x="28" y="14" width="16" height="20" rx="2" fill="#1877F2"/>
+                                    <path d="M34 34V26h-2.5v-3H34v-2.5c0-2.5 1.5-4 4-4h2.5v3H38.5c-.5 0-1 .5-1 1.5V23h3l-.5 3H37.5v8H34z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Marketing Digital</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#4285F4]/10 text-[#4285F4] text-xs rounded font-medium">Google Ads</span>
+                                        <span class="px-2 py-0.5 bg-[#1877F2]/10 text-[#1877F2] text-xs rounded font-medium">Meta</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Paid acquisition, retargeting & lead gen</p>
+                            </div>
+                        </div>
+
+                        <!-- AI Agents -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#10A37F]/10 to-[#412991]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#10A37F]/20 group-hover:to-[#412991]/20 transition-all">
+                                <!-- AI/ChatGPT + Claude -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <circle cx="14" cy="24" r="10" fill="#10A37F"/>
+                                    <path d="M10 18l4 6-4 6" stroke="white" stroke-width="2" fill="none"/>
+                                    <circle cx="34" cy="24" r="10" fill="#412991"/>
+                                    <path d="M30 18v12l8-6-8-6z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Agentes de IA</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#10A37F]/10 text-[#10A37F] text-xs rounded font-medium">ChatGPT</span>
+                                        <span class="px-2 py-0.5 bg-[#412991]/10 text-[#412991] text-xs rounded font-medium">Claude</span>
+                                        <span class="px-2 py-0.5 bg-[#4285F4]/10 text-[#4285F4] text-xs rounded font-medium">Gemini</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Automatización, copywriting & research inteligente</p>
+                            </div>
+                        </div>
+
+                        <!-- Microsoft Office -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#D83B01]/10 to-[#2B579A]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#D83B01]/20 group-hover:to-[#2B579A]/20 transition-all">
+                                <!-- PowerPoint + Word -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <rect x="4" y="8" width="18" height="14" rx="2" fill="#D83B01"/>
+                                    <path d="M8 12h10v2H8v-2zm0 4h8v2H8v-2z" fill="white"/>
+                                    <rect x="26" y="26" width="18" height="14" rx="2" fill="#2B579A"/>
+                                    <path d="M30 30h10v2H30v-2zm0 4h8v2H30v-2z" fill="white"/>
+                                    <text x="8" y="22" fill="white" font-size="6" font-weight="bold">P</text>
+                                    <text x="30" y="38" fill="white" font-size="6" font-weight="bold">W</text>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Microsoft Office</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#D83B01]/10 text-[#D83B01] text-xs rounded font-medium">PowerPoint</span>
+                                        <span class="px-2 py-0.5 bg-[#217346]/10 text-[#217346] text-xs rounded font-medium">Excel</span>
+                                        <span class="px-2 py-0.5 bg-[#2B579A]/10 text-[#2B579A] text-xs rounded font-medium">Word</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Presentaciones, análisis de datos & documentación profesional</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Management - Jira -->
+                        <div class="glass-card p-5 rounded-xl flex items-center gap-4 card-shimmer hover:border-cobalt transition-all hover-lift group">
+                            <div class="w-14 h-14 bg-gradient-to-br from-[#0052CC]/10 to-[#172B4D]/10 rounded-xl flex items-center justify-center shadow-inner group-hover:from-[#0052CC]/20 group-hover:to-[#172B4D]/20 transition-all">
+                                <!-- Jira -->
+                                <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none">
+                                    <path d="M38 24c0 7.732-6.268 14-14 14s-14-6.268-14-14c0-5 2.5-9.5 6.5-12L24 24l7.5-12C35.5 14.5 38 19 38 24z" fill="#0052CC"/>
+                                    <path d="M24 10l-7.5 12H24V10z" fill="#172B4D"/>
+                                    <path d="M24 38l7.5-12H24v12z" fill="#0052CC" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="font-bold text-navy font-['Inter']">Gestión de Proyectos</p>
+                                    <div class="flex gap-1.5">
+                                        <span class="px-2 py-0.5 bg-[#0052CC]/10 text-[#0052CC] text-xs rounded font-medium">Jira</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-navy-700 font-['Open_Sans'] mt-1">Seguimiento de tareas, sprint planning & coordinación de equipos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase accent-underline">Formación</p>
+                    <h2 class="text-4xl lg:text-5xl font-black text-navy tight-kern mb-10 font-['Inter']">Educación &<br/>Certificaciones</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <svg class="w-7 h-7 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy font-['Inter'] text-lg">Administración Pública</h4>
+                                    <p class="text-sm text-cobalt font-semibold font-['Inter'] mb-2">Universidad Central del Ecuador</p>
+                                    <p class="text-sm text-navy-700 font-['Open_Sans']">Formación en gestión organizacional, análisis de procesos y toma de decisiones estratégicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <svg class="w-7 h-7 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy font-['Inter'] text-lg">Diplomado en Marketing Digital</h4>
+                                    <p class="text-sm text-cobalt font-semibold font-['Inter'] mb-2">Instituto Patronato Municipal San José</p>
+                                    <p class="text-sm text-navy-700 font-['Open_Sans']">Especialización en estrategias de captación, funnels de conversión y publicidad digital (Google Ads, Meta).</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-[#D4AF37]/10 to-[#8B4513]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <svg class="w-7 h-7 text-[#8B4513]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy font-['Inter'] text-lg">Bachiller en Ciencias</h4>
+                                    <p class="text-sm text-cobalt font-semibold font-['Inter'] mb-2">Unidad Educativa Diez de Agosto</p>
+                                    <p class="text-sm text-navy-700 font-['Open_Sans']">Formación secundaria completa con especialización en áreas científicas y administrativas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-[#4285F4]/10 to-[#34A853]/10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <!-- Gemini AI Icon -->
+                                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L14 8L20 10L14 12L12 18L10 12L4 10L10 8L12 2Z" fill="url(#gemini-gradient)"/>
+                                        <defs>
+                                            <linearGradient id="gemini-gradient" x1="4" y1="2" x2="20" y2="18" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#4285F4"/>
+                                                <stop offset="0.5" stop-color="#9C27B0"/>
+                                                <stop offset="1" stop-color="#FF9800"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy font-['Inter'] text-lg">Inteligencia Artificial con Gemini</h4>
+                                    <p class="text-sm text-cobalt font-semibold font-['Inter'] mb-2">Certificación Google</p>
+                                    <p class="text-sm text-navy-700 font-['Open_Sans']">Aplicaciones de IA generativa, prompting avanzado y automatización de flujos de trabajo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl card-shimmer hover:border-cobalt transition-all">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <svg class="w-7 h-7 text-cobalt" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy font-['Inter'] text-lg">Certificaciones en Progreso</h4>
+                                    <p class="text-sm text-cobalt font-semibold font-['Inter'] mb-2">Sales Development</p>
+                                    <p class="text-sm text-navy-700 font-['Open_Sans']">HubSpot Sales Software, LinkedIn Sales Navigator, Salesforce Trailhead.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-navy -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <p class="text-cobalt font-semibold tracking-widest text-xs mb-4 font-['Inter'] uppercase">Disponible para oportunidades</p>
+                        <h2 class="text-4xl lg:text-5xl font-black text-white tight-kern leading-tight mb-6 font-['Inter']">
+                            ¿Listo para<br/><span class="text-cobalt">crecer juntos?</span>
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed font-['Open_Sans']">
+                            Estoy lista para aportar a tu empresa SaaS/tech como BDR o SDR. Conversemos sobre cómo puedo ayudar a generar más oportunidades y cerrar más negocios.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4 sm:space-y-6">
+                        <a href="mailto:stepahy31@gmail.com" class="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white/5 border border-white/10 hover:border-cobalt transition-all group">
+                            <div class="w-12 h-12 bg-cobalt rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold font-['Inter']">Email</p>
+                                <p class="text-slate-400 text-sm font-['Open_Sans']">stepahy31@gmail.com</p>
+                            </div>
+                            <svg class="w-5 h-5 text-cobalt ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/stephany-flores-51a8762a2/" target="_blank" class="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white/5 border border-white/10 hover:border-cobalt transition-all group">
+                            <div class="w-12 h-12 bg-cobalt rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.14-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold font-['Inter']">LinkedIn</p>
+                                <p class="text-slate-400 text-sm font-['Open_Sans']">/in/stephany-flores</p>
+                            </div>
+                            <svg class="w-5 h-5 text-cobalt ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        
+                        <a href="https://wa.me/593987879595" target="_blank" class="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white/5 border border-white/10 hover:border-cobalt transition-all group">
+                            <div class="w-12 h-12 bg-cobalt rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.13 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold font-['Inter']">WhatsApp</p>
+                                <p class="text-slate-400 text-sm font-['Open_Sans']">+593 98 787 9595</p>
+                            </div>
+                            <svg class="w-5 h-5 text-cobalt ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        
+                        <div class="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white/5 border border-white/10">
+                            <div class="w-12 h-12 bg-cobalt rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold font-['Inter']">Ubicación</p>
+                                <p class="text-slate-400 text-sm font-['Open_Sans']">Quito, Ecuador • Remote Ready</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 sm:py-12 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2 sm:gap-4 text-center md:text-left">
+            <p class="text-navy-700 text-sm font-['Open_Sans']">
+                &copy; 2026 <span class="font-bold text-navy font-['Inter']">Stephany Flores</span> • Business Development Representative
+            </p>
+            <p class="text-slate-400 text-xs font-['Open_Sans']">
+                Diseñado con propósito • Construido para resultados
+            </p>
+        </div>
+    </footer>
+
+    <!-- Falling Petals (Full Page Overlay) -->
+    <svg class="fixed inset-0 w-full h-full pointer-events-none z-50" style="height: 100vh;" viewBox="0 0 400 2000" fill="none" preserveAspectRatio="xMidYMin slice">
+        <g class="falling-petals">
+            <!-- Petal 1 -->
+            <ellipse cx="350" cy="-50" rx="6" ry="4" fill="#FFB7C5" opacity="0.6">
+                <animate attributeName="cy" from="-50" to="2050" dur="25s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="350;380;320;360;350" dur="25s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.8;0.6;0.3;0" dur="25s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 350 -50" to="720 350 2050" dur="25s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 2 -->
+            <ellipse cx="300" cy="-100" rx="5" ry="3" fill="#FFC4D0" opacity="0.5">
+                <animate attributeName="cy" from="-100" to="2100" dur="32s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="300;260;340;280;300" dur="32s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.7;0.5;0.2;0" dur="32s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 300 -100" to="-720 300 2100" dur="32s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 3 -->
+            <ellipse cx="320" cy="-20" rx="4" ry="3" fill="#FFB7C5" opacity="0.4">
+                <animate attributeName="cy" from="-20" to="2080" dur="28s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="320;350;290;330;320" dur="28s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0.4;0.1;0" dur="28s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 320 -20" to="540 320 2080" dur="28s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 4 -->
+            <ellipse cx="280" cy="-80" rx="5" ry="4" fill="#FFC4D0" opacity="0.5">
+                <animate attributeName="cy" from="-80" to="2120" dur="35s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="280;310;250;290;280" dur="35s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.8;0.5;0.2;0" dur="35s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 280 -80" to="-540 280 2120" dur="35s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 5 -->
+            <ellipse cx="360" cy="-150" rx="6" ry="4" fill="#FFB7C5" opacity="0.6">
+                <animate attributeName="cy" from="-150" to="2150" dur="22s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="360;330;390;340;360" dur="22s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0.6;0.3;0" dur="22s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 360 -150" to="720 360 2150" dur="22s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 6 -->
+            <ellipse cx="330" cy="-30" rx="4" ry="3" fill="#FFC4D0" opacity="0.4">
+                <animate attributeName="cy" from="-30" to="2070" dur="38s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="330;360;300;340;330" dur="38s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0.4;0.1;0" dur="38s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 330 -30" to="-540 330 2070" dur="38s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 7 -->
+            <ellipse cx="290" cy="-120" rx="5" ry="3" fill="#FFB7C5" opacity="0.5">
+                <animate attributeName="cy" from="-120" to="2080" dur="30s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="290;320;260;300;290" dur="30s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.7;0.5;0.2;0" dur="30s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 290 -120" to="900 290 2080" dur="30s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 8 -->
+            <ellipse cx="340" cy="-60" rx="4" ry="3" fill="#FFC4D0" opacity="0.6">
+                <animate attributeName="cy" from="-60" to="2060" dur="33s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="340;370;310;350;340" dur="33s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.8;0.6;0.2;0" dur="33s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="rotate" from="0 340 -60" to="-900 340 2060" dur="33s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Additional petals for full page coverage -->
+            <!-- Petal 9 -->
+            <ellipse cx="380" cy="-200" rx="5" ry="3" fill="#FFB7C5" opacity="0.5">
+                <animate attributeName="cy" from="-200" to="2200" dur="36s" begin="5s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="380;350;410;370;380" dur="36s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.7;0.5;0.2;0" dur="36s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 10 -->
+            <ellipse cx="260" cy="-180" rx="6" ry="4" fill="#FFC4D0" opacity="0.4">
+                <animate attributeName="cy" from="-180" to="2180" dur="40s" begin="10s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="260;230;290;250;260" dur="40s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0.4;0.1;0" dur="40s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 11 -->
+            <ellipse cx="310" cy="-250" rx="4" ry="3" fill="#FFB7C5" opacity="0.6">
+                <animate attributeName="cy" from="-250" to="2250" dur="24s" begin="3s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="310;280;340;300;310" dur="24s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.8;0.6;0.2;0" dur="24s" repeatCount="indefinite"/>
+            </ellipse>
+            <!-- Petal 12 -->
+            <ellipse cx="270" cy="-300" rx="5" ry="3" fill="#FFC4D0" opacity="0.5">
+                <animate attributeName="cy" from="-300" to="2300" dur="29s" begin="8s" repeatCount="indefinite"/>
+                <animate attributeName="cx" values="270;240;300;260;270" dur="29s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.7;0.5;0.2;0" dur="29s" repeatCount="indefinite"/>
+            </ellipse>
+        </g>
+    </svg>
+
+</body>
+</html>
