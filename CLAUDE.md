@@ -8,6 +8,7 @@ Portafolio personal estático de Stephany Nicole Flores Perez (Project Manager e
 - `img/principalderech.png`: foto del hero (la única imagen usada).
 - `img/principalizq.png`: no se usa en ninguna parte.
 - `README.md`: resumen del perfil; debe coincidir con los datos de `index.html`.
+- `cv-typst/`: fuente del CV en Typst (ver su README). Se compila a `assets/cv/Nicole_Flores_CV.pdf`, que es lo que descargan los botones "Descargar CV". Si cambia un dato en la página, actualizar también `cv-typst/cv_es.typ` y recompilar.
 
 ## Stack
 
